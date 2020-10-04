@@ -9,7 +9,7 @@ export default function createApolloClient(initialState, ctx) {
     return new ApolloClient({
         ssrMode: Boolean(ctx),
         link: new HttpLink({
-            uri: 'https://apipulsa.vercel.app/', // Server URL (must be absolute)
+            uri: process.env.GRAPH_URI, // Server URL (must be absolute)
             credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
             headers: {
                 authorization: "3cbab6ed12ec365ab502940bbe69ac747228224ec589f17b722adbf2e0fa841b",
