@@ -6,6 +6,7 @@ import fetch from 'isomorphic-unfetch';
 export default function createApolloClient(initialState, ctx) {
     // The `ctx` (NextPageContext) will only be present on the server.
     // use it to extract auth headers (ctx.req) or similar.
+    console.log(process.env.GRAPH_URI);
     return new ApolloClient({
         ssrMode: Boolean(ctx),
         link: new HttpLink({
