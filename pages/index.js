@@ -3,7 +3,14 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 
-export default function Home() {
+import { withApollo } from '../libs/apollo';
+import { useQuery } from '@apollo/react-hooks';
+import { GET_USERS } from '../gql/users';
+
+const Home = () => {
+    const { loading, error, data } = useQuery(GET_USERS);
+    if (error) return <h1>Error</h1>;
+    if (loading) return <h1>Loading...</h1>;
   return (
     <Layout home>
       <Head>
@@ -22,3 +29,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default withApollo({ ssr: true })(Home);

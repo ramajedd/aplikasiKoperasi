@@ -7,6 +7,7 @@ const name = 'Your Name'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
+  console.log(children);
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +33,7 @@ export default function Layout({ children, home }) {
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{name} ini namaku</h1>
           </>
         ) : (
           <>
