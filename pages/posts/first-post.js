@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import Alert from '../../components/Alert'
+import Alert from '../../components/alert'
 
 export default function FirstPost() {
   return (
