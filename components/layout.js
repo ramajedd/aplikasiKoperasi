@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+//import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Your Name'
@@ -31,10 +31,10 @@ export default function Layout({ mm, children }) {
           <>
             <img
               src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+  
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name} ini namaku</h1>
+            <h1 >{name} ini namaku</h1>
           </>
         ) : (
           <>
@@ -42,14 +42,14 @@ export default function Layout({ mm, children }) {
               <a>
                 <img
                   src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 >
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a >{name}</a>
               </Link>
             </h2>
           </>
@@ -57,7 +57,7 @@ export default function Layout({ mm, children }) {
       </header>
       <main>{children}</main>
       {!mm && (
-        <div className={styles.backToHome}>
+        <div >
           <Link href="/">
             <a>← Back to home</a>
           </Link>
