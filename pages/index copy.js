@@ -8,9 +8,9 @@ import { useQuery } from '@apollo/react-hooks';
 import { GET_USERS } from '../gql/users';
 
 const Home = () => {
-  const { loading, error, data } = useQuery(GET_USERS);
-  if (error) return <h1>Error</h1>;
-  if (loading) return <h1>Loading...</h1>;
+    const { loading, error, data } = useQuery(GET_USERS);
+    if (error) return <h1>Error</h1>;
+    if (loading) return <h1>Loading...</h1>;
   return (
     <Layout mm>
       <Head>
@@ -22,7 +22,7 @@ const Home = () => {
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
           <Link href="/posts/first-post">
-            <a>first post</a>
+              <a>first post</a>
           </Link>
         </p>
       </section>

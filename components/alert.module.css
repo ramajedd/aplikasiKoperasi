@@ -1,5 +1,6 @@
 .success {
-    color: green;
+   
+    @apply bg-blue-300;
   }
   .error {
     color: red;
