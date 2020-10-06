@@ -1,0 +1,7 @@
+@layer components {
+
+.card {
+    @apply p-4 bg-white shadow rounded;
+  }
+
+}
