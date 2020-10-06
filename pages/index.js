@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+//import utilStyles from '../styles/utils.module.css'
 
 import { withApollo } from '../libs/apollo';
 import { useQuery } from '@apollo/react-hooks';
@@ -16,7 +16,7 @@ const Home = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section >
         <p>Hi {data.users[0].name}</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
