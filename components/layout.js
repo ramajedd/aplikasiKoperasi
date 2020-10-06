@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
+//import styles from './layout.module.css'
 //import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import test from './layout.module.css'
+import React, { useState } from 'react';
 
 const name = 'Your Name'
 export const siteTitle = 'Next.js Sample Website'
@@ -9,8 +11,9 @@ export const siteTitle = 'Next.js Sample Website'
 export default function Layout({ mm, children }) {
   //console.log(mm); menghasilkan true
   //console.log(children);
+  const [isShown, setIsShown] = useState(false);
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -26,7 +29,7 @@ export default function Layout({ mm, children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header >
         {mm ? (
           <>
             <img
@@ -34,7 +37,18 @@ export default function Layout({ mm, children }) {
   
               alt={name}
             />
-            <h1 >{name} ini namaku</h1>
+            <h1 className="underline ...">{name} ini namaku</h1>
+            <button className={`${test.btn} ${test.btn.blue}`}>test klik </button>
+            <button
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}>
+                Hover over me!
+            </button>
+      {isShown && (
+        <div>
+          I'll appear when you hover over the button.
+        </div>
+      )}
           </>
         ) : (
           <>
