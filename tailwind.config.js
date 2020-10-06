@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   theme: {
     screens: {
       sm: '640px',
@@ -6,13 +7,8 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
-    colors: {
-      indigo: {
-        lighter: '#b3bcf5',
-        default: '#5c6ac4',
-        dark: '#202e78',
-      }
-    },
+  
+      
     fontFamily: {
       display: ['Gilroy', 'sans-serif'],
       body: ['Graphik', 'sans-serif'],
@@ -31,6 +27,6 @@ module.exports = {
         '96': '24rem',
         '128': '32rem',
       }
-    }
+    } 
   }
 }
