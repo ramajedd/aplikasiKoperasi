@@ -2,8 +2,28 @@
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
-    background-color: theme('colors.indigo.lighter');
+    
   }
+
+  .btn {
+    @apply font-bold ;
+    @apply py-2 ; 
+    @apply px-4 ;
+    @apply rounded;
+    @apply bg-blue-300;
+
+  }
+
+  .btn-blue {
+    @apply bg-blue-400;
+    
+  }
+
+
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+
   
   .header {
     display: flex;
