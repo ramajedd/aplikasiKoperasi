@@ -6,16 +6,16 @@ import React, { useState } from 'react';
 const name = 'Your Name'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ mm, children }) {
-  //console.log(mm); menghasilkan true
+export default function Layout({ beranda, children }) {
+  //console.log(beranda); menghasilkan true
   //console.log(children);
-  const [isShown, setIsShown] = useState(false);
+
   return (
     <div >
       
         <Menu/>
         <div>{children}</div>
-        {!mm && (
+        {!beranda && (
           <div >
             <Link href="/">
               <a>← Back to home</a>

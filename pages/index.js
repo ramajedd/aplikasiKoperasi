@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
+import Card from '../components/card'
 //import utilStyles from '../styles/utils.module.css'
 
 import { withApollo } from '../libs/apollo';
@@ -12,19 +13,25 @@ const Home = () => {
   if (error) return <h1>Error</h1>;
   if (loading) return <h1>Loading...</h1>;
   return (
-    <Layout mm>
+    <Layout beranda>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section >
-        <p>Hi {data.users[0].name}</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
+
+
+        <Card
+            data={`Hi ${data.users[0].name}`}
+            deskripsi={"This is a sample website - you’ll be building a site like this on our tutorial"}
+        />
+  
+          
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
           <Link href="/posts/first-post">
             <a>first post</a>
           </Link>
-        </p>
+        
+
       </section>
     </Layout>
   )
