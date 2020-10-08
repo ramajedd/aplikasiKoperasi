@@ -4,7 +4,7 @@ import Menu from './menu.js'
 import React, { useState } from 'react';
 
 const name = 'Your Name'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'apkop'
 
 export default function Layout({ beranda, children }) {
   //console.log(beranda); menghasilkan true
