@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import Card from '../components/card'
-//import utilStyles from '../styles/utils.module.css'
+import LayOutKonten from '../components/layoutKonten'
 
 import { withApollo } from '../libs/apollo';
 import { useQuery } from '@apollo/react-hooks';
@@ -12,15 +11,15 @@ const Home = () => {
   if (error) return <h1>Error</h1>;
   if (loading) return <h1>Loading...</h1>;
   return (
-    <Layout beranda>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section >
-        <Card
-          data={`Hi ${data.users[0].name}`}
-          deskripsi={"This is a sample website - you’ll be building a site like this on our tutorial"}
-        />
+        <LayOutKonten type='home'>
+          hi {data.users[0].name}
+          ini adalah children dari file index
+        </LayOutKonten>
       </section>
     </Layout>
   )

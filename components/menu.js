@@ -10,12 +10,13 @@ export default function Menu({ fixed }) {
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-pink-500 rounded">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+              <Link href="/">
               <a
                 className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-                href="#pablo"
               >
                 Akun Satu
                 </a>
+               </Link>
               <button
                 className="flex items-center shadow border-blue-500 border-2 rounded-full  px-4 py-2 text-blue-500 hover:bg-blue-500 hover:text-white visible sm:inline-flex md:inline-flex lg:hidden xl:hidden"
 
@@ -35,7 +36,7 @@ export default function Menu({ fixed }) {
               <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                 <li className="nav-item">
 
-                  <Link href="/pg/transaksi">
+                  <Link href="/pg/transaksi/pembayaran">
                     <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                       Transaksi
                     </a>

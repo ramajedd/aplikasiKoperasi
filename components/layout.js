@@ -1,12 +1,10 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Menu from './menu.js'
 import React, { useState } from 'react';
 
-const name = 'Your Name'
 export const siteTitle = 'apkop'
 
-export default function Layout({ beranda, children }) {
+export default function Layout({ home, children }) {
   //console.log(beranda); menghasilkan true
   //console.log(children);
 
@@ -15,7 +13,7 @@ export default function Layout({ beranda, children }) {
       
         <Menu/>
         <div>{children}</div>
-        {!beranda && (
+        {!home && (
           <div >
             <Link href="/">
               <a>← Back to home</a>
