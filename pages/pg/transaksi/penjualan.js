@@ -1,7 +1,8 @@
 //import Head from 'next/head'
 import LayoutKonten from '../../../components/layoutKonten'
 import Layout from '../../../components/layout'
-import FormPembayaran from '../../../components/formTransaksi'
+import FormTransaksi from '../../../components/formTransaksi'
+import Tabel from "../../../components/table"
 //import React, { useState } from 'react';
 
 export default function Transaksi() {
@@ -9,8 +10,9 @@ export default function Transaksi() {
   //const warna = status?'success':'error';
   return (
     <Layout>
-      <LayoutKonten>
-        <FormPembayaran/>
+      <LayoutKonten type='konten'>
+        <FormTransaksi/>
+        <Tabel/>
       </LayoutKonten>
     </Layout>
 
