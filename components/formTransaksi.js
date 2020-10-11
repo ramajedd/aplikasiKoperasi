@@ -1,13 +1,28 @@
 import React, { Fragment } from "react";
+import Autocomplete from "./autocomplete"
 
 export default function FormTransaksi(props) {
     //console.log(props);
     return (
         <form className="bg-gray-100 rounded p-8">
+            <Autocomplete
+                suggestions={[
+                    "Alligator",
+                    "Bask",
+                    "Crocodilian",
+                    "Death Roll",
+                    "Eggs",
+                    "Jaws",
+                    "Reptile",
+                    "Solitary",
+                    "Tail",
+                    "Wetlands"
+                  ]}
+            />
             <div className="mb-4">
-                <label className="block text-gray-600 text-sm font-semibold mb-2" for="title">
+                <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">
                     Title
-                            </label>
+                </label>
                 <input
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="title"
@@ -18,13 +33,13 @@ export default function FormTransaksi(props) {
             <div className="mb-4">
                 <label
                     className="block text-gray-600 text-sm font-semibold mb-2"
-                    for="username"
+                    htmlFor="username"
                 >
                     Subtitle
-                            </label>
+                </label>
                 <input
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="title"
+                    id="subtitle"
                     type="text"
                     placeholder="protect the pilot"
                 />
@@ -32,7 +47,7 @@ export default function FormTransaksi(props) {
             <div className="mb-4">
                 <label
                     className="block text-gray-600 text-sm font-semibold mb-2"
-                    for="username"
+                    htmlFor="username"
                 >
                     Description
                             </label>

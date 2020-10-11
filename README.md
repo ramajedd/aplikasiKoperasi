@@ -36,3 +36,11 @@ tailwindcss template:
 offline connection:
 1) https://medium.com/backticks-tildes/a-guide-to-handling-internet-disconnection-in-react-applications-5fd02eccb2bb
 2) https://www.npmjs.com/package/react-detect-offline
+
+layanan search engine berbasis react: 
+https://www.algolia.com/
+
+
+autocomplete react: 
+https://www.tracylum.com/blog/2017-05-20-autocomplete-an-address-with-a-react-form/
+https://www.digitalocean.com/community/tutorials/react-react-autocomplete
