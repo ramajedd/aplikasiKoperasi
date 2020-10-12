@@ -1,7 +1,7 @@
 //import Head from 'next/head'
 import LayoutKonten from '../../../components/layoutKonten'
 import Layout from '../../../components/layout'
-import FormTransaksi from '../../../components/formTransaksi'
+import ModalForm from '../../../components/modalForm'
 import Tabel from "../../../components/table"
 //import React, { useState } from 'react';
 
@@ -11,7 +11,20 @@ export default function Transaksi() {
   return (
     <Layout>
       <LayoutKonten type='konten'>
-        <FormTransaksi/>
+        <ModalForm suggestions=
+          {[
+            "Alligator",
+            "Bask",
+            "Crocodilian",
+            "Death Roll",
+            "Eggs",
+            "Jaws",
+            "Reptile",
+            "Solitary",
+            "Tail",
+            "Wetlands"
+        ]}
+        />
         <Tabel/>
       </LayoutKonten>
     </Layout>

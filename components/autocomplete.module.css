@@ -19,9 +19,9 @@
     padding: 0.5rem;
   }
   
-  .suggestion-active,
+  .suggestion,
   .suggestions li:hover {
-    background-color: #008f68;
+    background-color: #8f001f;
     color: #fae042;
     cursor: pointer;
     font-weight: 700;

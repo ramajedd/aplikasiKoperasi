@@ -1,23 +1,13 @@
 import React, { Fragment } from "react";
-import Autocomplete from "./autocomplete"
+import Autocomplete from "./autocomplete";
+import ModalForm from "./modalForm";
 
 export default function FormTransaksi(props) {
     //console.log(props);
     return (
         <form className="bg-gray-100 rounded p-8">
             <Autocomplete
-                suggestions={[
-                    "Alligator",
-                    "Bask",
-                    "Crocodilian",
-                    "Death Roll",
-                    "Eggs",
-                    "Jaws",
-                    "Reptile",
-                    "Solitary",
-                    "Tail",
-                    "Wetlands"
-                  ]}
+                suggestions={props.suggestions}
             />
             <div className="mb-4">
                 <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">

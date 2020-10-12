@@ -64,6 +64,7 @@ class Autocomplete extends Component {
 
     // User pressed the enter key, update the input and close the
     // suggestions
+    //console.log(e.keyCode===40)
     if (e.keyCode === 13) {
       this.setState({
         activeSuggestion: 0,
@@ -80,7 +81,8 @@ class Autocomplete extends Component {
       this.setState({ activeSuggestion: activeSuggestion - 1 });
     }
     // User pressed the down arrow, increment the index
-    else if (e.keyCode === 40) {
+    else if (e.keyCode===40) {
+      //console.log('im here')
       if (activeSuggestion - 1 === filteredSuggestions.length) {
         return;
       }
@@ -113,7 +115,7 @@ class Autocomplete extends Component {
 
               // Flag the active suggestion with a class
               if (index === activeSuggestion) {
-                className = "suggestion-active";
+              ;
               }
 
               return (
@@ -130,7 +132,7 @@ class Autocomplete extends Component {
         );
       } else {
         suggestionsListComponent = (
-          <div className="no-suggestions">
+          <div >
             <em>No suggestions, you're on your own!</em>
           </div>
         );

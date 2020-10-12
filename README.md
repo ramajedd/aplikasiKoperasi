@@ -32,6 +32,7 @@ tailwindcss template:
 4) https://tailwindesign.com/
 5) datepicker dan cara menginstalnya di next.js, tapi ini framework baru: https://rsuitejs.com/components/date-picker/
 6) plugin react untuk datepicker: https://reactdatepicker.com/
+7) https://www.creative-tim.com/
 
 offline connection:
 1) https://medium.com/backticks-tildes/a-guide-to-handling-internet-disconnection-in-react-applications-5fd02eccb2bb
