@@ -6,7 +6,7 @@ export default function ModalForm(props) {
     return (
         <>
             <button
-                className="bg-green-200 text-white active:bg-pink-600 font-bold rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-10 w-10 sm:min-w-0 md:min-w-0 lg:min-w-0 xl:min-w-0 ..."
+                className="bg-green-400 text-white active:bg-green-600 font-bold rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-10 w-10 sm:min-w-0 md:min-w-0 lg:min-w-0 xl:min-w-0 ..."
                 type="button"
                 style={{ transition: "all .15s ease" }}
                 onClick={() => setShowModal(true)}
