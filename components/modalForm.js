@@ -1,10 +1,10 @@
 import React from "react";
-import FormTransaksi from "./formTransaksi";
+import FormMulti from "./formMulti";
 
 export default function ModalForm(props) {
     const [showModal, setShowModal] = React.useState(false);
     return (
-        <>
+        <div className="p-4">
             <button
                 className="bg-green-400 text-white active:bg-green-600 font-bold rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 h-10 w-10 sm:min-w-0 md:min-w-0 lg:min-w-0 xl:min-w-0 ..."
                 type="button"
@@ -12,7 +12,7 @@ export default function ModalForm(props) {
                 onClick={() => setShowModal(true)}
             >
                 +
-      </button>
+            </button>
             {showModal ? (
                 <>
                     <div
@@ -38,7 +38,7 @@ export default function ModalForm(props) {
                                 </div>
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
-                                    <FormTransaksi
+                                    <FormMulti
                                         suggestions={props.suggestions} />
                                 </div>
                                 {/*footer*/}
@@ -66,6 +66,6 @@ export default function ModalForm(props) {
                     <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
                 </>
             ) : null}
-        </>
+        </div>
     );
 }

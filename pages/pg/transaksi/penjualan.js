@@ -1,8 +1,8 @@
 //import Head from 'next/head'
 import LayoutKonten from '../../../components/layoutKonten'
 import Layout from '../../../components/layout'
-import ModalForm from '../../../components/modalForm'
 import Tabel from "../../../components/table"
+import FormTransaksi from "../../../components/formTransaksi"
 //import React, { useState } from 'react';
 
 export default function Transaksi() {
@@ -11,7 +11,8 @@ export default function Transaksi() {
   return (
     <Layout>
       <LayoutKonten type='konten'>
-        <ModalForm suggestions=
+        <FormTransaksi
+          suggestions=
           {[
             "Alligator",
             "Bask",
@@ -24,7 +25,9 @@ export default function Transaksi() {
             "Tail",
             "Wetlands"
         ]}
+
         />
+        
         <Tabel/>
       </LayoutKonten>
     </Layout>
@@ -32,3 +35,5 @@ export default function Transaksi() {
 
   )
 }
+
+//penjelasan: karena layoutKOnten hanya berisi dua kolom, maka harus hanya ada dua komponesn: FormTransaksi dan Tabel
