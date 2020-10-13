@@ -513,7 +513,7 @@
 }
 
 .Calendar__day {
-  display: block;
+  
   width: calc(100% / 7);
   text-align: center;
   padding: calc(0.25em - 1px) 0;
