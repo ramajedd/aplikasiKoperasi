@@ -1,9 +1,7 @@
-import React, { Fragment, useState } from "react";
-import { Calendar } from "react-modern-calendar-datepicker";
+import React, { Fragment } from "react";
 
 export default function LayoutKonten(props) {
   //console.log(props);
-  const [selectedDay, setSelectedDay] = useState(null);
   return (
     <div className="w-full px-4">
       <div className="shadow p-4 bg-white">
@@ -15,22 +13,15 @@ export default function LayoutKonten(props) {
                 <div className="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
                 <div className="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
               </div>
-
+              
             </Fragment>
 
           }
 
-          <div className={props.type === 'konten' ? "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 pt-5 pb-8" : 'undefined'}>
-            {props.children}
-          </div>
-
-        </div>
-        <div className="relative p-6 flex-auto">
-          <Calendar
-            value={selectedDay}
-            onChange={setSelectedDay}
-            shouldHighlightWeekends
-          />
+            <div className={props.type==='konten'?"grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 pt-5 pb-8":'undefined'}>
+              {props.children}
+            </div>
+          
         </div>
 
         <div className="mt-4">
