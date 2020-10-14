@@ -1,4 +1,3 @@
-//import '../styles/globals.css'
 import '../css/tailwind.css'
 import '../css/datePicker.css'
 
