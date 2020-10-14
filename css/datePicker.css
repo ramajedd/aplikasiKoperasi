@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 .DatePicker {
   position: relative;
   display: inline-block;
@@ -670,3 +672,5 @@
     transform: translateX(0);
   }
 }
+
+/* purgecss end ignore */

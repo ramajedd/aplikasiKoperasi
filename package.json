@@ -34,6 +34,7 @@
     "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "stylelint-config-recommended": "^3.0.0"
   }
 }
