@@ -6,7 +6,6 @@ import { useQuery } from '@apollo/react-hooks';
 import withApollo from '../libs/apolloData';
 import { GET_USERS } from '../gql/users';
 import { getDataFromTree } from '@apollo/react-ssr';
-import { renderToStringWithData } from "@apollo/client/react/ssr";
 
 //import "../css/datePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
