@@ -18,8 +18,8 @@ const App = () => {
  
 
   return (
-    <div suppressHydrationWarning={true}>
-      { process.browser && 
+ 
+     
       <DatePicker
       
       value={selectedDay}
@@ -27,9 +27,7 @@ const App = () => {
       //renderInput={renderCustomInput} // render a custom input
       shouldHighlightWeekends
     />
-      }
-    
-    </div>
+
   );
 };
 
