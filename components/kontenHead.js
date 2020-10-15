@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function Transaksi() {
-  // const [status, setStatus] = useState(false);
-  //const warna = status?'success':'error';
+  
+  
   return (
     <>
     <div className="flex flex-wrap pt-2 px-4 justify-center  text-xs uppercase font-bold">Penjualan</div>

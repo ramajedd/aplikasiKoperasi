@@ -17,7 +17,7 @@ export default function ModalForm(props) {
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-                    //onClick={() => setShowModal(false)}
+                    
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-6xl">
                             {/*content*/}

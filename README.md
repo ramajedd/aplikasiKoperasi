@@ -60,3 +60,8 @@ https://www.digitalocean.com/community/tutorials/react-react-autocomplete
 MASALAH ERROR PADA SAAT PRODUKSI DI VERCEL: 
 
 https://stackoverflow.com/questions/50497026/minified-react-error-152-how-to-resolve-this
+
+
+regex untuk VS CODE (PENTING)
+
+//+\s*(\W|\w).+

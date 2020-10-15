@@ -2,7 +2,7 @@ import React from "react";
 import Autocomplete from "./autocomplete";
 
 export default function FormTransaksi(props) {
-    //console.log(props);
+    
     return (
         <form className="bg-gray-100 rounded p-8">
             <Autocomplete
