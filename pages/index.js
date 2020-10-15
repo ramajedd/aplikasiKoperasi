@@ -11,14 +11,6 @@ import DatePicker from "react-modern-calendar-datepicker";
 import React, { useState } from "react";
 import useLayoutEffect from "./useIsomorphicLayoutEffect"
 
-function MyAppXX() {
-  const [isMounted, setIsMounted] = useState([])
-  useLayoutEffect(() => {
-    setIsMounted(<MyDatePicker/>)
-  }, []);
-  return isMounted?isMounted:null;
-};
-
 const MyDatePicker = () => {
   const [selectedDay, setSelectedDay] = useState(null);
   return (
@@ -31,6 +23,15 @@ const MyDatePicker = () => {
 
   );
 };
+
+function MyAppXX() {
+  const [isMounted, setIsMounted] = useState([])
+  useLayoutEffect(() => {
+    setIsMounted(<MyDatePicker/>)
+  }, []);
+  return isMounted;
+};
+
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_USERS);
