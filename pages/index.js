@@ -16,7 +16,7 @@ function MyAppXX() {
   useLayoutEffect(() => {
     setIsMounted(<MyDatePicker/>)
   }, []);
-  return isMounted;
+  return isMounted?isMounted:null;
 };
 
 const MyDatePicker = () => {
