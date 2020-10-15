@@ -65,3 +65,4 @@ https://stackoverflow.com/questions/50497026/minified-react-error-152-how-to-res
 regex untuk VS CODE (PENTING)
 
 //+\s*(\W|\w).+
+LIHAT DI SINI: https://stackoverflow.com/questions/9511510/visual-studio-regex-to-remove-all-comments-and-blank-lines-in-vb-net-code-using

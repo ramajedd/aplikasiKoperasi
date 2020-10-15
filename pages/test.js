@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-// Here you would fetch and return the user
+
 const useUser = () => ({ user: null, loading: false })
 
 export default function Page() {
