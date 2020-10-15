@@ -9,8 +9,11 @@ import fetch from 'isomorphic-unfetch';
 
 
 export default withApollo(
+    
     ({ initialState, ctx }) => {
+        //console.log(initialState)
         return new ApolloClient({
+           
             ssrMode: Boolean(ctx),
             link: ApolloLink.from([
                 onError(({ graphQLErrors, networkError }) => {
