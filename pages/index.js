@@ -48,4 +48,4 @@ const Home = () => {
   )
 }
 
-export default withApollo(Home);
+export default withApollo(Home,{getDataFromTree});
