@@ -14,8 +14,8 @@ import useLayoutEffect from "./useIsomorphicLayoutEffect"
 const MyDatePicker = () => {
   const [selectedDay, setSelectedDay] = useState(null);
   return (
- 
-      <DatePicker
+
+    <DatePicker
       value={selectedDay}
       onChange={setSelectedDay}
       shouldHighlightWeekends
@@ -27,7 +27,7 @@ const MyDatePicker = () => {
 function MyAppXX() {
   const [isMounted, setIsMounted] = useState([])
   useLayoutEffect(() => {
-    setIsMounted(<MyDatePicker/>)
+    setIsMounted(<MyDatePicker />)
   }, []);
   return isMounted;
 };
@@ -43,7 +43,7 @@ const Home = () => {
         <title>{siteTitle}</title>
       </Head>
       <section >
-        <MyAppXX/>
+        <MyAppXX />
         <LayOutKonten type='home'>
           hi {data.users[0].name}
           ini adalah children dari file index
@@ -53,4 +53,4 @@ const Home = () => {
   )
 }
 
-export default withApollo(Home,{getDataFromTree});
+export default withApollo(Home, { getDataFromTree });
