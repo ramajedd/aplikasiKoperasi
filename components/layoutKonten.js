@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
 export default function LayoutKonten(props) {
-  //console.log(props);
   return (
     <div className="w-full px-4">
       <div className="shadow p-4 bg-white">

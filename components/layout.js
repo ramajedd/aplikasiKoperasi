@@ -5,9 +5,6 @@ import React, { useState } from 'react';
 export const siteTitle = 'apkop'
 
 export default function Layout({ home, children }) {
-  //console.log(beranda); menghasilkan true
-  //console.log(children);
-
   return (
     <div >
       

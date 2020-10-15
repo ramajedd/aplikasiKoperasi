@@ -11,7 +11,6 @@ import fetch from 'isomorphic-unfetch';
 export default withApollo(
     
     ({ initialState, ctx }) => {
-        //console.log(initialState)
         return new ApolloClient({
            
             ssrMode: Boolean(ctx),
@@ -41,7 +40,6 @@ export default withApollo(
     },
     {
         render: ({ Page, props }) => {
-            //console.log(Page);
             return (
                 <ApolloProvider client={props.apollo}>
                     <Page {...props} />
@@ -52,5 +50,3 @@ export default withApollo(
 );
 
 
-/// referensi 
-// https://github.com/lfades/next-with-apollo

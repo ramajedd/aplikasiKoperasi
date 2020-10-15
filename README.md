@@ -46,3 +46,17 @@ https://www.algolia.com/
 autocomplete react: 
 https://www.tracylum.com/blog/2017-05-20-autocomplete-an-address-with-a-react-form/
 https://www.digitalocean.com/community/tutorials/react-react-autocomplete
+
+
+
+
+// referensi
+//https://medium.com/@alexandereardon/uselayouteffect-and-ssr-192986cdcf7a
+
+/// referensi 
+// https://github.com/lfades/next-with-apollo
+
+
+MASALAH ERROR PADA SAAT PRODUKSI DI VERCEL: 
+
+https://stackoverflow.com/questions/50497026/minified-react-error-152-how-to-resolve-this

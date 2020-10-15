@@ -7,7 +7,6 @@ import withApollo from '../libs/apolloData';
 import { GET_USERS } from '../gql/users';
 import { getDataFromTree } from '@apollo/react-ssr';
 
-//import "../css/datePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
 import React, { useState } from "react";
 import useLayoutEffect from "./useIsomorphicLayoutEffect"
@@ -27,7 +26,6 @@ const MyDatePicker = () => {
       <DatePicker
       value={selectedDay}
       onChange={setSelectedDay}
-      //renderInput={renderCustomInput} // render a custom input
       shouldHighlightWeekends
     />
 
@@ -55,7 +53,3 @@ const Home = () => {
 }
 
 export default withApollo(Home,{getDataFromTree});
-
-
-// referensi rendering in browser (GAGAL)
-// https://haodong.io/render-client-side-only-component-in-next-js
