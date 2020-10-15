@@ -19,12 +19,18 @@ const App = () => {
  
 
   return (
-    <DatePicker
+    <div suppressHydrationWarning={true}>
+      { process.browser && 
+      <DatePicker
+      
       value={selectedDay}
       onChange={setSelectedDay}
       //renderInput={renderCustomInput} // render a custom input
       shouldHighlightWeekends
     />
+      }
+    
+    </div>
   );
 };
 
@@ -49,3 +55,7 @@ const Home = () => {
 }
 
 export default withApollo(Home,{getDataFromTree});
+
+
+// referensi rendering in browser 
+// https://haodong.io/render-client-side-only-component-in-next-js

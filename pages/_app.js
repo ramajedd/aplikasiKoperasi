@@ -1,14 +1,16 @@
 import '../css/tailwind.css'
 import useLayoutEffect from "./useIsomorphicLayoutEffect"
+import React, { useState } from "react";
 //import '../css/datePicker.css'
 
-function MyAppXX({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-function MyApp({ Component, pageProps }) {
+function MyAppXX({ Component, pageProps }) {
+  const [isMounted, setIsMounted] = useState()
   useLayoutEffect(() => {
-    console.log('hello there');
+    setIsMounted(<MyAppXX/>)
   }, []);
   return <Component {...pageProps} />
 };
