@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import LayOutKonten from '../components/layoutKonten'
 
-import { withApollo } from '../libs/apollo';
 import { useQuery } from '@apollo/react-hooks';
+import withApollo from '../libs/apolloData';
 import { GET_USERS } from '../gql/users';
+import { getDataFromTree } from '@apollo/react-ssr';
+import { renderToStringWithData } from "@apollo/client/react/ssr";
 
 //import "../css/datePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
@@ -46,4 +48,4 @@ const Home = () => {
   )
 }
 
-export default withApollo({ ssr: true })(Home);
+export default withApollo(Home);
