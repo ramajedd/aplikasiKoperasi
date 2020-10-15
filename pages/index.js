@@ -9,7 +9,7 @@ import { getDataFromTree } from '@apollo/react-ssr';
 
 import DatePicker from "react-modern-calendar-datepicker";
 import React, { useState } from "react";
-import useLayoutEffect from "./useIsomorphicLayoutEffect"
+import useLayoutEffect from "../libs/useIsomorphicLayoutEffect"
 
 const MyDatePicker = () => {
   const [selectedDay, setSelectedDay] = useState(null);
