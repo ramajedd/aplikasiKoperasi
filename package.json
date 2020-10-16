@@ -34,10 +34,12 @@
     "react-modern-calendar-datepicker": "^3.1.6",
     "react-themeable": "^1.1.0",
     "sass": "^1.26.11",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.10",
+    "styled-components": "latest"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "stylelint-config-recommended": "^3.0.0"
+    "stylelint-config-recommended": "^3.0.0",
+    "babel-plugin-styled-components": "latest"
   }
 }
