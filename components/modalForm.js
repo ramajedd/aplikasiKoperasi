@@ -39,7 +39,8 @@ export default function ModalForm(props) {
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
                                     <FormMulti
-                                        suggestions={props.suggestions} />
+                                        suggestions={props.suggestions} 
+                                    />
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">

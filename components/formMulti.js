@@ -4,13 +4,18 @@ import Autocomplete from "./autocomplete";
 export default function FormTransaksi(props) {
     
     return (
-        <form className="bg-gray-100 rounded p-8">
+        <form className="bg-white-100 rounded p-4">
+            <div className="mb-4">
+            <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">
+                    Item dijual
+                </label>
             <Autocomplete
                 suggestions={props.suggestions}
             />
+            </div>
             <div className="mb-4">
                 <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">
-                    Title
+                    Harga beli
                 </label>
                 <input
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -24,7 +29,7 @@ export default function FormTransaksi(props) {
                     className="block text-gray-600 text-sm font-semibold mb-2"
                     htmlFor="username"
                 >
-                    Subtitle
+                    Harga jual
                 </label>
                 <input
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -33,12 +38,12 @@ export default function FormTransaksi(props) {
                     placeholder="protect the pilot"
                 />
             </div>
-            <div className="mb-4">
+            <div>
                 <label
                     className="block text-gray-600 text-sm font-semibold mb-2"
                     htmlFor="username"
                 >
-                    Description
+                    Keterangan
                             </label>
                 <textarea
                     rows="4"
@@ -50,14 +55,6 @@ export default function FormTransaksi(props) {
                 </textarea>
             </div>
 
-            <div className="flex items-center justify-between">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                    Create post
-                            </button>
-                <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                    cancel
-                            </a>
-            </div>
         </form>
 
 

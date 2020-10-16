@@ -3,7 +3,7 @@ import { Calendar } from "react-modern-calendar-datepicker";
 import CalenderStyle from "./datePickerStyle";
 
 export default function DatePickerModal() {
-    const [showModal, setShowModal] = React.useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [selectedDay, setSelectedDay] = useState(null);
     const opsi = selectedDay ? selectedDay.day + "/" + selectedDay.month + "/" + selectedDay.year : "piliih tanggal";
     return (
@@ -28,7 +28,7 @@ export default function DatePickerModal() {
 
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
-                                    <CalenderStyle/>
+                                    <CalenderStyle />
                                     <Calendar
                                         value={selectedDay}
                                         onChange={setSelectedDay}
