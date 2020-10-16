@@ -66,3 +66,10 @@ regex untuk VS CODE (PENTING)
 
 //+\s*(\W|\w).+
 LIHAT DI SINI: https://stackoverflow.com/questions/9511510/visual-studio-regex-to-remove-all-comments-and-blank-lines-in-vb-net-code-using
+
+
+tentang render css di server: 
+
+https://medium.com/swlh/server-side-rendering-styled-components-with-nextjs-1db1353e915e
+
+https://dev.to/rsanchezp/next-js-and-styled-components-style-loading-issue-3i68
