@@ -77,6 +77,7 @@ class Autocomplete extends Component {
     }
   };
   render() {
+    const {className} = this.props
     const {
       onChange,
       onClick,
@@ -122,7 +123,7 @@ class Autocomplete extends Component {
     return (
       <Fragment>
         <input
-          className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className={className}
           
           type="text"
           placeholder="Protocol 3"
