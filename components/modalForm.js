@@ -3,6 +3,22 @@ import FormMulti from "./formMulti";
 
 export default function ModalForm(props) {
     const [showModal, setShowModal] = React.useState(false);
+    const [input, setInput] = React.useState([]);
+    //console.log(input);
+
+    const handleInput = val => {
+        const arr = input;
+        const shouldUpdate = arr.some(d => d.name === val.name);
+        if (shouldUpdate){
+            const array = arr.map (x => x.name === val.name ? {name:val.name, value:val.value}:x);
+            setInput(array);
+        }else{
+            setInput([...arr, val]);
+        }
+        
+    }
+
+    
     return (
         <div className="p-4 py-1">
             <button
@@ -40,6 +56,7 @@ export default function ModalForm(props) {
                                 <div className="relative p-6 flex-auto">
                                     <FormMulti
                                         suggestions={props.suggestions}
+                                        handleInput={(val) => handleInput(val)}
                                     />
                                 </div>
                                 {/*footer*/}

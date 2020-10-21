@@ -46,6 +46,7 @@ class Autocomplete extends Component {
       showSuggestions: false,
       userInput: e.currentTarget.innerText
     });
+    this.props.onSelect ({name: this.props.id, value: e.currentTarget.innerText})
   };
   
   onKeyDown = e => {
@@ -124,7 +125,7 @@ class Autocomplete extends Component {
       <Fragment>
         <input
           className={className}
-          
+          id ={this.props.id}
           type="text"
           placeholder="Protocol 3"
           onChange={onChange}

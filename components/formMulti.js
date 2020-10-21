@@ -4,11 +4,13 @@ import NumberFormat from "react-number-format"
 
 export default function FormTransaksi(props) {
 
-    const [inputValue, setInputValue] = useState("");
-    const onChangeHandler = event => {
-        setInputValue(event.target.id);
+    function handleInput(e) {
+        return props.handleInput({ name: e.target.id, value: e.target.value })
     };
-    console.log(inputValue);
+
+    function handleInputX(obj) {
+        return props.handleInput(obj)
+    }
 
     return (
         <form className="bg-white-100 rounded p-4">
@@ -18,7 +20,9 @@ export default function FormTransaksi(props) {
                 </label>
                 <Autocomplete
                     suggestions={props.suggestions}
+                    id="item dijual"
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    onSelect={handleInputX}
                 />
             </div>
             <div className="mb-4">
@@ -32,7 +36,7 @@ export default function FormTransaksi(props) {
                     placeholder="protect the pilot"
                     decimalSeparator={","}
                     thousandSeparator={"."}
-                    onChange={onChangeHandler}
+                    onChange={handleInput}
                 />
             </div>
             <div className="mb-4">
@@ -48,7 +52,9 @@ export default function FormTransaksi(props) {
                     type="text"
                     placeholder="protect the pilot"
                     decimalSeparator={","}
-                    thousandSeparator={"."} />
+                    thousandSeparator={"."}
+                    onChange={handleInput}
+                />
 
             </div>
             <div className="mb-4">
@@ -64,7 +70,9 @@ export default function FormTransaksi(props) {
                     type="text"
                     placeholder="protect the pilot"
                     decimalSeparator={","}
-                    thousandSeparator={"."} />
+                    thousandSeparator={"."}
+                    onChange={handleInput}
+                />
             </div>
             <div className="mb-4">
                 <label
@@ -80,7 +88,9 @@ export default function FormTransaksi(props) {
                     disabled={true}
                     placeholder="protect the pilot"
                     decimalSeparator={","}
-                    thousandSeparator={"."} />
+                    thousandSeparator={"."}
+
+                />
             </div>
             <div>
                 <label
@@ -95,6 +105,7 @@ export default function FormTransaksi(props) {
                     className="bg-gray-100 p-1 appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="description"
                     type="text"
+                    onChange={handleInput}
                 >
                 </textarea>
             </div>
