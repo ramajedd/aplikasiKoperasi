@@ -34,7 +34,9 @@ export default function BoxBuyer(props) {
     return (
         <div className="bg-white pb-4 px-4 rounded-md w-full">
             <div className="overflow-x-auto mt-6">
-                <table className="table-auto border-collapse w-full">
+                {data.length===0?
+                    "silahkan tambahkan transaksi":
+                    <table className="table-auto border-collapse w-full">
                     <thead>
                         <tr className="rounded-lg text-sm font-medium text-gray-700 text-left font-size: 0.9674rem">
                             <RenderTableHeader/>
@@ -44,6 +46,8 @@ export default function BoxBuyer(props) {
                             <RenderTableData/>
                     </tbody>
                 </table>
+                }
+                
             </div>
             
         </div>
