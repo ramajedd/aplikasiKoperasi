@@ -6,7 +6,9 @@ import BoxOutput from "./boxOutput";
 
 export default function Transaksi(props) {
 
-
+  const handleInput=value=>{
+    console.log(value);
+  }
   return (
     <div className="bg-gray-100">
       <KontenHead />
@@ -14,6 +16,7 @@ export default function Transaksi(props) {
       <BoxOutput/>
       <ModalForm
         suggestions={props.suggestions}
+        handleInput = {(value)=>handleInput(value)}
       />
 
     </div>

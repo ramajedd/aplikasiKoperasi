@@ -1,24 +1,38 @@
 import React from "react";
 import FormMulti from "./formMulti";
+import NumberFormat from "react-number-format"
 
 export default function ModalForm(props) {
     const [showModal, setShowModal] = React.useState(false);
     const [input, setInput] = React.useState([]);
-    //console.log(input);
+
+    //const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    //console.log(array1.reduce(reducer));
+    const hargaJualArray = input.filter(x => x.name === "harga jual");
+    const hargaJual = hargaJualArray.length == 1 ? hargaJualArray[0].value : 0;
+
+    const jumlahDibeliArray = input.filter(x => x.name === "jumlah");
+    const jumlahDibeli = jumlahDibeliArray.length == 1 ? jumlahDibeliArray[0].value : 1;
 
     const handleInput = val => {
         const arr = input;
         const shouldUpdate = arr.some(d => d.name === val.name);
-        if (shouldUpdate){
-            const array = arr.map (x => x.name === val.name ? {name:val.name, value:val.value}:x);
+        if (shouldUpdate) {
+            const array = arr.map(x => x.name === val.name ? { name: val.name, value: val.value } : x);
             setInput(array);
-        }else{
+        } else {
             setInput([...arr, val]);
         }
-        
+
     }
 
-    
+    const handleSubmit = () => {
+        setShowModal(false);
+        return props.handleInput(input);
+    }
+
+
+
     return (
         <div className="p-4 py-1">
             <button
@@ -54,10 +68,30 @@ export default function ModalForm(props) {
                                 </div>
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
-                                    <FormMulti
-                                        suggestions={props.suggestions}
-                                        handleInput={(val) => handleInput(val)}
-                                    />
+                                    <form className="bg-white-100 rounded p-4 " autoComplete="off">
+                                        <FormMulti
+                                            suggestions={props.suggestions}
+                                            handleInput={(val) => handleInput(val)}
+                                        />
+
+                                        <div className="mb-4">
+                                            <div
+                                                className="bg-blue-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                id="Total"
+                                                type="text"
+                                            >
+                                                
+                                                <NumberFormat
+                                                    //className="bg-blue-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                    thousandSeparator={"."}
+                                                    displayType={'text'}
+                                                    decimalSeparator={","}
+                                                    value={hargaJual * jumlahDibeli}
+                                                />
+
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
@@ -73,7 +107,7 @@ export default function ModalForm(props) {
                                         className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                                         type="button"
                                         style={{ transition: "all .15s ease" }}
-                                        onClick={() => setShowModal(false)}
+                                        onClick={() => handleSubmit()}
                                     >
                                         Save Changes
                                     </button>

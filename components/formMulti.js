@@ -8,12 +8,17 @@ export default function FormTransaksi(props) {
         return props.handleInput({ name: e.target.id, value: e.target.value })
     };
 
-    function handleInputX(obj) {
+    function handleInputFormatNumber(obj) {
+        //console.log(obj)
+        return props.handleInput({ name: obj.id, value: obj.value })
+    };
+
+    function handleAutoComplete(obj) {
         return props.handleInput(obj)
     }
 
     return (
-        <form className="bg-white-100 rounded p-4">
+        <>
             <div className="mb-4">
                 <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">
                     Item dijual
@@ -21,8 +26,9 @@ export default function FormTransaksi(props) {
                 <Autocomplete
                     suggestions={props.suggestions}
                     id="item dijual"
+                    autoComplete={'' + Math.random()}
                     className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    onSelect={handleInputX}
+                    onSelect={handleAutoComplete}
                 />
             </div>
             <div className="mb-4">
@@ -36,7 +42,10 @@ export default function FormTransaksi(props) {
                     placeholder="protect the pilot"
                     decimalSeparator={","}
                     thousandSeparator={"."}
-                    onChange={handleInput}
+                    onValueChange={(values) => {
+                        const {formattedValue, value} = values;
+                        handleInputFormatNumber({id:"harga beli", value, formattedValue});
+                      }}
                 />
             </div>
             <div className="mb-4">
@@ -53,7 +62,10 @@ export default function FormTransaksi(props) {
                     placeholder="protect the pilot"
                     decimalSeparator={","}
                     thousandSeparator={"."}
-                    onChange={handleInput}
+                    onValueChange={(values) => {
+                        const {formattedValue, value} = values;
+                        handleInputFormatNumber({id:"harga jual", value, formattedValue});
+                      }}
                 />
 
             </div>
@@ -71,27 +83,13 @@ export default function FormTransaksi(props) {
                     placeholder="protect the pilot"
                     decimalSeparator={","}
                     thousandSeparator={"."}
-                    onChange={handleInput}
+                    onValueChange={(values) => {
+                        const {formattedValue, value} = values;
+                        handleInputFormatNumber({id:"jumlah", value, formattedValue});
+                      }}
                 />
             </div>
-            <div className="mb-4">
-                <label
-                    className="block text-gray-600 text-sm font-semibold mb-2"
-                    htmlFor="username"
-                >
-                    Total
-                </label>
-                <NumberFormat
-                    className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="Total"
-                    type="text"
-                    disabled={true}
-                    placeholder="protect the pilot"
-                    decimalSeparator={","}
-                    thousandSeparator={"."}
-
-                />
-            </div>
+            
             <div>
                 <label
                     className="block text-gray-600 text-sm font-semibold mb-2"
@@ -110,7 +108,7 @@ export default function FormTransaksi(props) {
                 </textarea>
             </div>
 
-        </form>
+        </>
 
 
     );
