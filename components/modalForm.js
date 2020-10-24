@@ -7,8 +7,6 @@ export default function ModalForm(props) {
     const [showModal, setShowModal] = React.useState(false);
     const [input, setInput] = React.useState([]);
 
-    //const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    //console.log(array1.reduce(reducer));
     const hargaJualArray = input.filter(x => x.name === "harga jual");
     const hargaJual = hargaJualArray.length == 1 ? hargaJualArray[0].value : 0;
 

@@ -1,8 +1,31 @@
 import React from 'react';
 
-export default function Transaksi() {
-  
-  
+export default function Transaksi(props) {
+  const menuName =props.menu
+  const [status, setStatus] = React.useState(menuName[0]);
+  const handleClick =(e)=>{
+    setStatus(e.target.name);
+    props.onClickMenu(e.target.name);
+  }
+
+ 
+
+  function Menu (){
+      return menuName.map((menu, index)=>{
+        return (
+          <li className={status===menu?"bg-red-100":""} key={index}>
+            <button
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green hover:opacity-75"
+                  name = {menu}
+                  onClick={(e)=>handleClick(e)}
+                >
+                  {menu}
+           </button>
+            
+          </li>
+        )
+      })
+  }
   return (
     <>
     <div className="flex flex-wrap pt-2 px-4 justify-center  text-xs uppercase font-bold">Penjualan</div>
@@ -11,30 +34,7 @@ export default function Transaksi() {
         <div className="w-full px-4">
           <div className="flex justify-center bg-blue-200 rounded">
             <ul className="items-center flex">
-              <li >
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green hover:opacity-75"
-                  href="#pablo"
-                >
-                  Plg
-                    </a>
-              </li>
-              <li >
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green hover:opacity-75"
-                  href="#pablo"
-                >
-                  Mem
-                    </a>
-              </li>
-              <li >
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green hover:opacity-75"
-                  href="#pablo"
-                >
-                  Anon
-                    </a>
-              </li>
+              <Menu/>
             </ul>
           </div>
         </div>

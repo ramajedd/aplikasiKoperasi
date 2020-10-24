@@ -5,7 +5,9 @@ import BoxBuyer from "./boxBuyer";
 import BoxOutput from "./boxOutput";
 
 export default function Transaksi(props) {
-  const [dataArray, setDataArray] = useState([])
+  const modes = ["Plg","Anon"]
+  const [dataArray, setDataArray] = useState([]);
+  const [mode, setMode] = useState(modes[0]);
   const handleInput=value=>{
     const item = value.filter(x=>x.name==='item dijual'&&{item:x.value})[0];
     const harga = value.filter(x=>x.name==='harga jual'&&{item:x.value})[0];
@@ -17,10 +19,19 @@ export default function Transaksi(props) {
     
   }
 
+  function onClickMenu(val) {
+    setMode(val);
+  }
+
   return (
     <div className="bg-white-100 border-solid border-4 border-gray-200">
-      <KontenHead />
-      <BoxBuyer />
+      <KontenHead 
+        menu={modes}
+        onClickMenu = {(val)=>onClickMenu(val)}
+      />
+      <BoxBuyer 
+        mode = {mode}
+      />
       <BoxOutput
           dataArray = {dataArray}
       />

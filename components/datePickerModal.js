@@ -6,11 +6,11 @@ import Button from "./button";
 export default function DatePickerModal() {
     const [showModal, setShowModal] = useState(false);
     const [selectedDay, setSelectedDay] = useState(null);
-    const opsi = selectedDay ? selectedDay.day + "/" + selectedDay.month + "/" + selectedDay.year : "pilih tanggal";
+    const opsi = selectedDay ? selectedDay.day + "/" + selectedDay.month + "/" + selectedDay.year : "tgl";
     return (
         <>
             <Button
-                theme={0}
+                theme={2}
                 onClick={() => setShowModal(true)}
             >
                 {opsi}

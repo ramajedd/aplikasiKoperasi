@@ -8,12 +8,12 @@ export default function Modal (props) {
     }
 
     return (
-        <div className="p-4 py-1">
+        <div >
             <Button
-                theme ={0}
+                theme ={2}
                 onClick={() => setShowModal(true)}
             >
-                {props.title}
+                {props.name}
             </Button>
             {showModal ? (
                 <>
