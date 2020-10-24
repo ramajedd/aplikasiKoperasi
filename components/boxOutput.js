@@ -3,13 +3,8 @@ import React from "react";
 
 export default function BoxBuyer(props) {
     
-    const data = [
-        {item: "item 1", harga: 20000, jumlah: 2, subtotal: 20000},
-        {item: "item 2", harga: 30000, jumlah: 2, subtotal: 30000},
-        {item: "item 3", harga: 40000, jumlah: 2, subtotal: 40000},
-        {item: "item 4", harga: 50000, jumlah: 2, subtotal: 50000},
-    ]
-    //console.log(Object.keys(data[0]))
+    const data = props.dataArray;
+    
     function RenderTableHeader() {
         let header = Object.keys(data[0])
         return header.map((key, index) => {
@@ -21,7 +16,7 @@ export default function BoxBuyer(props) {
         return data.map((d, index) => {
            const { item, harga, jumlah, subtotal } = d 
            return (
-              <tr className="hover:bg-gray-100 border-b border-gray-200 py-10" key={item}>
+              <tr className="hover:bg-gray-100 border-b border-gray-200 py-10" key={index}>
                  <td className="px-4 py-4">{item}</td>
                  <td className="px-4 py-4">{harga}</td>
                  <td className="px-4 py-4">{jumlah}</td>

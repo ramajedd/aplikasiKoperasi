@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Calendar } from "react-modern-calendar-datepicker";
 import CalenderStyle from "./datePickerStyle";
+import Button from "./button";
 
 export default function DatePickerModal() {
     const [showModal, setShowModal] = useState(false);
     const [selectedDay, setSelectedDay] = useState(null);
-    const opsi = selectedDay ? selectedDay.day + "/" + selectedDay.month + "/" + selectedDay.year : "piliih tanggal";
+    const opsi = selectedDay ? selectedDay.day + "/" + selectedDay.month + "/" + selectedDay.year : "pilih tanggal";
     return (
         <>
-            <button
-                className="bg-pink-200 text-blue active:bg-pink-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                type="button"
+            <Button
+                theme={0}
                 onClick={() => setShowModal(true)}
             >
                 {opsi}
-            </button>
+            </Button>
             {showModal ? (
                 <>
                     <div
