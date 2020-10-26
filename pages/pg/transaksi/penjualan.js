@@ -6,10 +6,13 @@ import FormTransaksi from "../../../components/formTransaksi"
 
 
 export default function Transaksi() {
-
+  
   return (
     <Layout>
-      <LayoutKonten type='konten'>
+      <LayoutKonten 
+        type='konten'
+        page ={1}
+      >
         <FormTransaksi
           suggestions=
           {[

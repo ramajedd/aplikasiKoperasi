@@ -1,13 +1,12 @@
 import React from "react";
 import DatePicker from "./datePickerModal"
 import Modal from "./modal"
-import ButtonLayout from "./layoutButton";
+import LayoutButton from "./layoutButton";
 
 
 export default function BoxBuyer(props) {
-    //const [showButton, setShowBUtton] = React.useState(true);
     return (
-        <ButtonLayout>
+        <LayoutButton theme={1}>
             <DatePicker />
             {props.mode !== "Anon" &&
                 <Modal name={props.mode} title="Pelanggan">
@@ -18,6 +17,6 @@ export default function BoxBuyer(props) {
             <Modal name="Kas" title="Akun Kas">
                 pilih akun kas
             </Modal>
-        </ButtonLayout>
+        </LayoutButton>
     )
 }
