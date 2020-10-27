@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './button';
 import LayoutButton from './layoutButton';
 import Toggle from "./toggle";
+import Modal from "./modal"
 
 export default function Transaksi(props) {
   const menuName = props.menu
@@ -31,7 +32,10 @@ export default function Transaksi(props) {
   }
   return (
     <>
-      <div className="flex flex-wrap pt-2 px-4 justify-center  text-xs uppercase font-bold"><Toggle/></div>
+      <div className="flex flex-row pt-4 px-4 text-m font-bold mx-auto flex flex-wrap items-center justify-between">
+        <Toggle />
+        <Modal name={'kas'} title={'woi'}>HOw are you</Modal>
+      </div>
       <LayoutButton theme={2}>
         <Menu />
       </LayoutButton>

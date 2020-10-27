@@ -13,10 +13,6 @@ export default function BoxBuyer(props) {
                     hi how are you
                 </Modal>
             }
-
-            <Modal name="Kas" title="Akun Kas">
-                pilih akun kas
-            </Modal>
         </LayoutButton>
     )
 }
