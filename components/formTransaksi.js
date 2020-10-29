@@ -5,7 +5,7 @@ import BoxBuyer from "./boxBuyer";
 import BoxOutput from "./boxOutput";
 
 export default function Transaksi(props) {
-  const modes = ["Plg","Anon"]
+  const modes = ["Plg","Anon"];
   const [dataArray, setDataArray] = useState([]);
   const [mode, setMode] = useState(modes[0]);
   const handleInput=value=>{
@@ -30,7 +30,7 @@ export default function Transaksi(props) {
         onClickMenu = {(val)=>onClickMenu(val)}
       />
       <BoxBuyer 
-        mode = {mode}
+        menuName = {mode}
       />
       <BoxOutput
           dataArray = {dataArray}

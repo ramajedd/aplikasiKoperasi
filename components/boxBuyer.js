@@ -8,8 +8,8 @@ export default function BoxBuyer(props) {
     return (
         <LayoutButton theme={1}>
             <DatePicker />
-            {props.mode !== "Anon" &&
-                <Modal name={props.mode} title="Pelanggan">
+            {props.menuName !== "Anon" &&
+                <Modal name={props.menuName} title="Pelanggan">
                     hi how are you
                 </Modal>
             }
