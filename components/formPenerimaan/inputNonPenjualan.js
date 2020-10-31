@@ -1,7 +1,7 @@
 import React from "react";
 import FormMulti from "./formMulti";
 import NumberFormat from "react-number-format";
-import Button from "./button";
+import Button from "../element/button";
 
 export default function ModalForm(props) {
     const [showModal, setShowModal] = React.useState(false);

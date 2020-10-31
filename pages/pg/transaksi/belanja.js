@@ -1,7 +1,7 @@
 
 import LayoutKonten from '../../../components/layoutKonten'
 import Layout from '../../../components/layout'
-import Tabel from "../../../components/table"
+import Tabel from "../../../components/element/table"
 
 
 export default function Transaksi() {

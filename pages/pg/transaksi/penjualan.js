@@ -1,7 +1,7 @@
 import LayoutKonten from '../../../components/layoutKonten'
 import Layout from '../../../components/layout'
-import Tabel from "../../../components/table"
-import FormTransaksi from "../../../components/formTransaksi"
+import Tabel from "../../../components/element/table"
+import FormPenerimaan from "../../../components/formPenerimaan/"
 
 
 export default function Transaksi() {
@@ -12,7 +12,7 @@ export default function Transaksi() {
         type='konten'
         page ={1}
       >
-        <FormTransaksi
+        <FormPenerimaan
           suggestions=
           {[
             "Alligator",

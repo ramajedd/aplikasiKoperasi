@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Calendar } from "react-modern-calendar-datepicker";
-import CalenderStyle from "./datePickerStyle";
 import Button from "./button";
+import {Kalender} from "./datePicker";
 
 export default function DatePickerModal() {
     const [showModal, setShowModal] = useState(false);
@@ -28,8 +27,8 @@ export default function DatePickerModal() {
 
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
-                                    <CalenderStyle />
-                                    <Calendar
+                                    
+                                    <Kalender
                                         value={selectedDay}
                                         onChange={setSelectedDay}
                                         shouldHighlightWeekends

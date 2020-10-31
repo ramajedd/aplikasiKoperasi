@@ -1,6 +1,6 @@
 import React, { Fragment} from "react";
 import Link from "next/link";
-import {menuData} from "../libs/menuConfig"
+import {menuData} from "../libs/menuConfig";
 
 export default function LayoutKonten(props) {
   return (
@@ -22,7 +22,6 @@ export default function LayoutKonten(props) {
                           <a
                             className="px-4 py-3 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
                             name={button.name}
-                            
                           >
                             {button.name}
                           </a>
@@ -32,17 +31,12 @@ export default function LayoutKonten(props) {
                   })
                 }
               </ul>
-
-                
             </Fragment>
-
           }
 
           <div className={props.type === 'konten' ? "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 pt-5 pb-8" : 'undefined'}>
             {props.children}
-         
           </div>
-
         </div>
 
         <div className="mt-4">
