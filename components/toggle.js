@@ -1,12 +1,13 @@
 import styles from "./toggle.module.css"
 import react from "react"
 
-export default function Toggle () {
+export default function Toggle (props) {
     const [status, setStatus] = react.useState(true)
     const handleClick =()=>{
         setStatus(!status)
+        props.changeStatus (status);
     }
-    const title = status?'Penjualan':'Non-penjualan';
+    const title = status?props.option[0]:props.option[1];
     
     return (
         <label
