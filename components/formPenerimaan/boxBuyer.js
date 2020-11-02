@@ -51,13 +51,11 @@ export default function BoxBuyer(props) {
                         <Input
                             name="Tanggal"
                             inputType="dateButton"
-
                         />
                         <Input
                             name="Penyetor"
                             inputType="text"
                         />
-
                     </Fragment>
             }
         </Fragment>

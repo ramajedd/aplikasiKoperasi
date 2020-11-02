@@ -9,7 +9,7 @@ export default function LayoutKonten(props) {
         <div className="text-left">
           {props.type !== 'home' &&
             <Fragment>
-              <ul className="flex justify-center bg-gray-200 flex-col lg:flex-row list-none lg:ml-auto">
+              <ul className="flex justify-center bg-white flex-col lg:flex-row list-none lg:ml-auto">
                 { 
                   menuData.map((button, index) => {
                     return (

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import Alert from '../../components/alert'
+import Alert from '../../components/element/alert'
 import React, { useState } from 'react';
 
 export default function FirstPost() {

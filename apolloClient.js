@@ -4,9 +4,6 @@ import { HttpLink } from 'apollo-link-http';
 import fetch from 'isomorphic-unfetch';
 
 export default function createApolloClient(initialState, ctx) {
-    
-    
-
     return new ApolloClient({
         ssrMode: Boolean(ctx),
         link: new HttpLink({

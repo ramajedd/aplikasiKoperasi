@@ -3,6 +3,7 @@ import InputPenjualan from "./inputPenjualan";
 import KontenHead from "./kontenHead";
 import BoxBuyer from "./boxBuyer";
 import BoxOutput from "./boxOutput";
+import NonPenjualan from "./inputNonPenjualan";
 
 export default function Transaksi(props) {
   const menus = ["Plg", "Anon"];
@@ -61,7 +62,7 @@ export default function Transaksi(props) {
             suggestions={props.suggestions}
             handleInput={!mode ? (value) => handleInput(value) : (value) => handleInput2(value)}
           /> :
-          <div>helloo</div>
+          <NonPenjualan/>
       }
 
     </div>
