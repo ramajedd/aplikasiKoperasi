@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Menu from './menu.js'
-import React, { useState } from 'react';
+import React from 'react';
 
 export const siteTitle = 'apkop'
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import {menuData} from "../libs/menuConfig";
 
 export default function LayoutKonten(props) {
+  
   return (
     <div className="w-full px-4">
       <div className="shadow p-4 bg-red">
@@ -12,6 +13,7 @@ export default function LayoutKonten(props) {
               <ul className="flex justify-center bg-white flex-col lg:flex-row list-none lg:ml-auto">
                 { 
                   menuData.map((button, index) => {
+                    console.log(props.page);
                     return (
                       <li 
                         className={`nav-item rounded-full shadow ${props.page===button.name?"bg-blue-200":"bg-gray-200"} mt-1 mb-1 border-2 border-blue-500 hover:shadow-lg hover:bg-blue-200`}

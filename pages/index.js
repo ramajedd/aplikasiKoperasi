@@ -35,7 +35,7 @@ function MyAppXX() {
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_USERS);
-  if (error) return <h1>Error</h1>;
+  if (error) return <h1>Terjadi masalah</h1>;
   if (loading) return <h1>Loading...</h1>;
   return (
     <Layout home>

@@ -2,7 +2,7 @@ import React from "react";
 import Modal2Btn from "../element/modal2Btn";
 import Input from "../element/input";
 
-export default function InputNonPenjualan(props) {
+export default function InputNonBelanja (props) {
 
     const [input, setInput] = React.useState([]);
 
@@ -35,21 +35,21 @@ export default function InputNonPenjualan(props) {
 
     return (
         <Modal2Btn
-            title="non-penjualan"
+            title="non-belanja"
             handleSave = {()=>handleSave()}
 
         >
             <Input
                 name="Item"
                 inputType="autocomplete"
-                placeholder ={"pemasukan"}
+                placeholder ={"pengeluaran"}
                 suggestions={props.suggestions}
                 handleAutoComplete={(obj) => handleAutoComplete(obj)}
             />
             <Input
                 name="Biaya"
                 inputType="formatNumber"
-                placeholder ="nominal biaya"
+                placeholder ="nominal"
                 handleInput={(val)=>handleInput(val)}
             />
             <Input

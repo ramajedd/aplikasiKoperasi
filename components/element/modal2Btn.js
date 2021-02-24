@@ -1,12 +1,11 @@
 import React from "react";
-import NumberFormat from "react-number-format";
 import Button from "../element/button";
 
 export default function FormPenjualan (props) {
     const [showModal, setShowModal] = React.useState(false);
     const handleSave = ()=>{
         setShowModal(false);
-        console.log('hellooo')
+        props.handleSave()
     }
     return (
         <div className="p-4 py-1">
@@ -45,24 +44,6 @@ export default function FormPenjualan (props) {
                                 <div className="relative p-6 flex-auto">
                                     <form className="bg-white-100 rounded p-4 " autoComplete="off">
                                         {props.children}
-
-                                        <div className="mb-4">
-                                            <div
-                                                className="bg-blue-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                                id="Total"
-                                                type="text"
-                                            >
-
-                                                <NumberFormat
-                                                    //className="bg-blue-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                                    thousandSeparator={"."}
-                                                    displayType={'text'}
-                                                    decimalSeparator={","}
-                                                    value={23223}
-                                                />
-
-                                            </div>
-                                        </div>
                                     </form>
                                 </div>
                                 {/*footer*/}

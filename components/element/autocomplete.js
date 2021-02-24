@@ -78,7 +78,7 @@ class Autocomplete extends Component {
     }
   };
   render() {
-    const {className} = this.props
+    const {className, placeholder, type} = this.props
     const {
       onChange,
       onClick,
@@ -126,8 +126,8 @@ class Autocomplete extends Component {
         <input
           className={className}
           id ={this.props.id}
-          type="text"
-          placeholder="Protocol 3"
+          type={type}
+          placeholder={placeholder}
           onChange={onChange}
           onKeyDown={onKeyDown}
           value={userInput}

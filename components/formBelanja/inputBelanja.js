@@ -2,11 +2,11 @@ import React from "react";
 import Modal2Btn from "../element/modal2Btn";
 import Input from "../element/input";
 
-export default function InputNonPenjualan(props) {
+export default function InputBelanja (props) {
 
     const [input, setInput] = React.useState([]);
 
-    const hargaJualArray = input.filter(x => x.name === "Biaya");
+    const hargaJualArray = input.filter(x => x.name === "Harga Jual");
     const hargaJual = hargaJualArray.length === 1 ? hargaJualArray[0].value : 0;
 
     const jumlahDibeliArray = input.filter(x => x.name === "Jumlah");
@@ -35,21 +35,27 @@ export default function InputNonPenjualan(props) {
 
     return (
         <Modal2Btn
-            title="non-penjualan"
+            title="non-belanja"
             handleSave = {()=>handleSave()}
 
         >
             <Input
                 name="Item"
                 inputType="autocomplete"
-                placeholder ={"pemasukan"}
+                placeholder ={"nama barang"}
                 suggestions={props.suggestions}
                 handleAutoComplete={(obj) => handleAutoComplete(obj)}
             />
             <Input
-                name="Biaya"
+                name="Harga Beli"
                 inputType="formatNumber"
-                placeholder ="nominal biaya"
+                placeholder ="harga beli"
+                handleInput={(val)=>handleInput(val)}
+            />
+            <Input
+                name="Harga Jual"
+                inputType="formatNumber"
+                placeholder ="harga jual"
                 handleInput={(val)=>handleInput(val)}
             />
             <Input

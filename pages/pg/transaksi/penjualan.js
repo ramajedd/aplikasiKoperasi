@@ -13,7 +13,7 @@ export default function Transaksi() {
         page ={1}
       >
         <FormPenerimaan
-          suggestions=
+          suggestionsPenjualan=
           {[
             "Alligator",
             "Bask",
@@ -26,6 +26,7 @@ export default function Transaksi() {
             "Tail",
             "Wetlands"
         ]}
+        suggestionsPenerimaanLain = {['oke', 'oncom', 'amir']}
 
         />
         

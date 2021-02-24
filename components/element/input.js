@@ -47,12 +47,14 @@ export default function Input(props) {
             {
                 props.inputType === 'autocomplete' &&
                 <div className="mb-4">
-                    <label className="block text-gray-600 text-sm font-semibold mb-2" htmlFor="title">
+                    <label className="block text-gray-600 text-sm font-semibold mb-2">
                         {props.name}
                     </label>
                     <Autocomplete
                         suggestions={props.suggestions}
                         id={props.name}
+                        type={"text"}
+                        placeholder={props.placeholder}
                         autoComplete={'' + Math.random()}
                         className="bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         onSelect={handleAutoComplete}
@@ -60,7 +62,7 @@ export default function Input(props) {
                 </div>
             }
             {
-                 props.inputType === 'formatNumber' &&
+                props.inputType === 'formatNumber' &&
                 <div className="mb-4">
                     <label
                         className="block text-gray-600 text-sm font-semibold mb-2"
@@ -81,6 +83,25 @@ export default function Input(props) {
                         }}
                     />
 
+                </div>
+            }
+            {
+                props.inputType === 'formatNumberStatic' &&
+                <div className="mb-4">
+                    <div
+                        className="bg-blue-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id={props.name}
+                        type="text"
+                    >
+
+                        <NumberFormat
+                            thousandSeparator={"."}
+                            displayType={'text'}
+                            decimalSeparator={","}
+                            value={props.value}
+                        />
+
+                    </div>
                 </div>
             }
         </div>

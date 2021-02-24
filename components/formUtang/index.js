@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import InputPenjualan from "./inputPenjualan";
+import InputBelanja from "./inputBelanja";
 import KontenHead from "./kontenHead";
 import BoxBuyer from "./boxBuyer";
 import BoxOutput from "./boxOutput";
 import BoxOutput2 from "./boxOutput2";
-import NonPenjualan from "./inputNonPenjualan";
+import InputNonBelanja from "./inputNonBelanja";
 
 export default function Transaksi(props) {
-  const menus = ["Plg", "Anon"];
+  const menus = ["Pvd", "Anon"];
   const [dataArray, setDataArray] = useState([]);
   const [menu, setMenu] = useState(menus[0]);
   const [mode, setMode] = useState(false);
 
   const handleInput = value => {
-    const item = value.filter(x => x.name === 'item dijual' && { x })[0];
-    const harga = value.filter(x => x.name === 'harga jual' && { x })[0];
-    const jumlah = value.filter(x => x.name === 'jumlah' && { x })[0];
+    const item = value.filter(x => x.name === 'Item' && { x })[0];
+    const harga = value.filter(x => x.name === 'Harga Beli' && { x })[0];
+    const jumlah = value.filter(x => x.name === 'Jumlah' && { x })[0];
     if (item && harga && jumlah) {
       const data = { item: item.value, harga: harga.value, jumlah: jumlah.value, subtotal: harga.value * jumlah.value };
       setDataArray([...dataArray, data]);
@@ -68,12 +68,12 @@ export default function Transaksi(props) {
 
       {
         !mode ?
-          <InputPenjualan
-            suggestions={props.suggestionsPenjualan}
+          <InputBelanja
+            suggestions={props.suggestionsBelanja}
             handleInput={(value) => handleInput(value)}
           /> :
-          <NonPenjualan
-            suggestions={props.suggestionsPenerimaanLain}
+          <InputNonBelanja
+            suggestions={props.suggestionsPengeluaranLain}
             handleInput={(value) => handleInput2(value)}
           />
       }
